@@ -423,7 +423,8 @@ img {
 	height: 28px;
 }
 
-.announcement > .twitter-share-button {
+.announcement > .twitter-share-button,
+.announcement > img[src^="data:image/svg+xml"] {
 	bottom: 20px;
 	display: block;
 	left: 20px;
