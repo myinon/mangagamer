@@ -82,18 +82,20 @@ img {
 }
 
 .nav-bar {
-	background-color: #fff;
-	border: 5px solid #000;
+	background-color: #f5f7fa;
 	margin-bottom: 20px;
 	margin-top: 1rem;
-	padding: 1.5em 0 0.5em;
 }
 
 .menu {
+	background-color: #fff;
+	border: 5px solid #000;
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	margin: 0 20px;
+	max-width: 960px;
+	padding: 1.5em 0 0.5em;
 	text-align: center;
+	transition: border-color 0.2s ease;
 }
 
 .menu .item {
@@ -353,6 +355,7 @@ img {
 }
 
 .announcement img {
+	flex: none;
 	width: 100%;
 }
 
@@ -596,8 +599,43 @@ hr:nth-of-type(1):nth-last-of-type(1) {
 
 @media (min-width: 980px) {
 	.header-bar,
-	.content {
+	.content,
+	.menu {
 		margin: 0 auto;
+	}
+}
+
+@supports (position: sticky) or (position: -webkit-sticky) {
+	@media (min-width: 640px) and (min-height: 550px) {
+		.intob .nav-bar {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			transition: background-color 0.2s ease;
+			z-index: 9;
+		}
+		.intob .nav-bar::after {
+			background-color: #000;
+			bottom: 0;
+			content: " ";
+			display: block;
+			height: 5px;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			transition: opacity 0.2s ease;
+		}
+		.intob .nav-bar.-sticky {
+			background-color: #fff;
+		}
+		.intob .nav-bar.-sticky::after {
+			opacity: 1;
+		}
+		.intob .-sticky .menu {
+			border-color: transparent;
+			transition-duration: 0s;
+		}
 	}
 }
 

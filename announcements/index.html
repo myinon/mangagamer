@@ -41,47 +41,47 @@
 						<a href="https://twitter.com/share" class="twitter-share-button" data-text="MangaGamer’s 2017 Convention Schedule &amp; Announcements" data-via="MangaGamer" data-related="MangaGamer" data-size="large">Tweet</a>
 					</div>
 				</div>
-				<nav class="nav-bar" aria-label="Main Menu">
-					<ul class="menu" role="menubar">
-						<li>
-							<a class="item is-past" href="2016.html">
-								<p class="convention-title"><span class="fas fa-fw fa-angle-double-left"></span>2016</p>
-								<p class="convention-dates">&nbsp;</p>
-							</a>
-						</li>
-						<li>
-							<a class="item is-past" href="#animeboston">
-								<p class="convention-title">Anime Boston</p>
-								<p class="convention-dates">March 31<sup>st</sup> &ndash; April 2<sup>nd</sup></p>
-							</a>
-						</li>
-						<li>
-							<a class="item is-past" href="#animecentral">
-								<p class="convention-title">Anime Central</p>
-								<p class="convention-dates">May 19<sup>th</sup> &ndash; 21<sup>st</sup></p>
-							</a>
-						</li>
-						<li>
-							<a class="item is-past" href="#animeexpo">
-								<p class="convention-title">Anime Expo</p>
-								<p class="convention-dates">July 1<sup>st</sup> &ndash; 4<sup>th</sup></p>
-							</a>
-						</li>
-						<li>
-							<a class="item is-past" href="#otakon">
-								<p class="convention-title">Otakon</p>
-								<p class="convention-dates">August 11<sup>th</sup> &ndash; 13<sup>th</sup></p>
-							</a>
-						</li>
-						<li>
-							<a class="item is-next" href="#animenyc">
-								<p class="convention-title">Anime NYC</p>
-								<p class="convention-dates">November 17<sup>th</sup> &ndash; 19<sup>th</sup></p>
-							</a>
-						</li>
-					</ul>
-				</nav>
 			</header>
+			<nav class="nav-bar" aria-label="Main Menu">
+				<ul class="menu" role="menubar">
+					<li>
+						<a class="item is-past" href="2016.html">
+							<p class="convention-title"><span class="fas fa-fw fa-angle-double-left"></span>2016</p>
+							<p class="convention-dates">&nbsp;</p>
+						</a>
+					</li>
+					<li>
+						<a class="item is-past" href="#animeboston">
+							<p class="convention-title">Anime Boston</p>
+							<p class="convention-dates">March 31<sup>st</sup> &ndash; April 2<sup>nd</sup></p>
+						</a>
+					</li>
+					<li>
+						<a class="item is-past" href="#animecentral">
+							<p class="convention-title">Anime Central</p>
+							<p class="convention-dates">May 19<sup>th</sup> &ndash; 21<sup>st</sup></p>
+						</a>
+					</li>
+					<li>
+						<a class="item is-past" href="#animeexpo">
+							<p class="convention-title">Anime Expo</p>
+							<p class="convention-dates">July 1<sup>st</sup> &ndash; 4<sup>th</sup></p>
+						</a>
+					</li>
+					<li>
+						<a class="item is-past" href="#otakon">
+							<p class="convention-title">Otakon</p>
+							<p class="convention-dates">August 11<sup>th</sup> &ndash; 13<sup>th</sup></p>
+						</a>
+					</li>
+					<li>
+						<a class="item is-next" href="#animenyc">
+							<p class="convention-title">Anime NYC</p>
+							<p class="convention-dates">November 17<sup>th</sup> &ndash; 19<sup>th</sup></p>
+						</a>
+					</li>
+				</ul>
+			</nav>
 			<article class="content">
 				<div class="notification">
 					<button class="delete"><span class="fas fa-times"></span></button>
@@ -480,7 +480,7 @@
 									<div class="twitter-spacer"></div>
 								</section>
 							</a>
-							<a href="https://twitter.com/share" class="twitter-share-button" data-text="#PrincessEvangile W Happiness physical edition coming December 15th! https://www.mangagamer.com/detail.php?goods_type=3&am;product_code=252" data-via="MangaGamer" data-related="MangaGamer" data-size="large">Tweet</a>
+							<a href="https://twitter.com/share" class="twitter-share-button" data-text="#PrincessEvangile W Happiness physical edition coming December 15th! https://www.mangagamer.com/detail.php?goods_type=3&amp;product_code=252" data-via="MangaGamer" data-related="MangaGamer" data-size="large">Tweet</a>
 						</article>
 						<article class="announcement is-linked">
 							<a href="https://www.mangagamer.com/detail.php?goods_type=1&amp;product_code=1037" class="announcement-link">
@@ -566,17 +566,21 @@
 			</footer>
 		</main>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js" integrity="sha256-IylDNWjip7FK2TJUYck237qBTBeSiwnSFDCjLG686D4=" crossorigin="anonymous"></script>
 		<script type="application/javascript">
 		<!--
 			(function () {
 				let delBtns = document.querySelectorAll(".delete"),
+					navbar = document.querySelector(".nav-bar"),
+					navlinks = navbar.querySelectorAll("a"),
 					fn_delBtn = function (e) {
 						e.target.parentElement.style.display = "none";
 						e.preventDefault();
 					},
 					fn_scrollLink = function (e) {
 						let hash = e.currentTarget.hash,
-							el = null;
+							el = null,
+							offset = 0;
 
 						if (hash.charAt(0) === "#") {
 							hash = hash.substring(1);
@@ -584,20 +588,41 @@
 
 						el = document.getElementById(hash);
 						if (el !== null) {
-							el.scrollIntoView({ behavior: "smooth", block: "start" });
+							offset = el.offsetTop;
+							if (document.documentElement.classList.contains("intob")) {
+								offset -= navbar.getBoundingClientRect().height + 20;
+								window.scroll({ left: 0, top: Math.round(offset), behavior: "smooth" });
+							} else {
+								el.scrollIntoView({ behavior: "smooth", block: "start" });
+							}
 						}
 
 						e.preventDefault();
 					};
 
-				for (let b of delBtns) {
-					b.addEventListener("click", fn_delBtn, false);
+				for (let b = 0; b < delBtns.length; b++) {
+					delBtns[b].addEventListener("click", fn_delBtn, false);
 				}
 
-				for (let a of document.links) {
-					if (a.hash.charAt(0) === "#") {
+				for (let i = 0; i < navlinks.length; i++) {
+					let a = navlinks[i];
+					if (typeof a !== "undefined" && a !== null && a.hash.charAt(0) === "#") {
 						a.addEventListener("click", fn_scrollLink, false);
 					}
+				}
+
+				if ("IntersectionObserver" in window) {
+					let observer = new IntersectionObserver(function (entries) {
+						entries.forEach(function (entry) {
+							if (entry.boundingClientRect.y <= 0) {
+								entry.target.classList.add("-sticky");
+							} else {
+								entry.target.classList.remove("-sticky");
+							}
+						});
+					}, { rootMargin: "-1px 0px 0px 0px", threshold: [1] });
+					observer.observe(navbar);
+					document.documentElement.classList.add("intob");
 				}
 			}());
 		//-->
