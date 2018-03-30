@@ -138,16 +138,14 @@ img {
 	letter-spacing: 1px;
 	margin-bottom: 5px;
 	margin-top: 0;
+	opacity: 0;
 	text-transform: uppercase;
 	transition: opacity 0.3s ease;
 }
 
-.menu .item.is-past .convention-dates {
-	opacity: 0;
-}
-
-.menu .item.is-past:hover .convention-dates,
-.menu .item.is-past:focus .convention-dates {
+.menu .item.is-next .convention-dates,
+.menu .item:hover .convention-dates,
+.menu .item:focus .convention-dates {
 	opacity: 1;
 }
 
