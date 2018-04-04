@@ -190,6 +190,7 @@ img {
 }
 
 .delete {
+	align-items: center;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -198,8 +199,11 @@ img {
 	border-radius: 0 3px;
 	color: #fff;
 	cursor: pointer;
-	display: inline-block;
-	height: 24px;
+	display: flex;
+	font-size: 95.23809523809524%;
+	height: 26px;
+	justify-content: center;
+	padding: 0 8px;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -208,7 +212,7 @@ img {
 	-moz-user-select: none;
 	user-select: none;
 	vertical-align: top;
-	width: 24px;
+	width: 26px;
 }
 
 .delete:hover {
