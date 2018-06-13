@@ -28,6 +28,10 @@ img {
 	margin-right: auto;
 }
 
+.nowrap {
+	white-space: nowrap;
+}
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -127,14 +131,13 @@ img {
 	transition: box-shadow 0.3s ease;
 }
 
-.callout:hover,
-.callout:focus,
+.callout:not(.banner):hover,
+.callout:not(.banner):focus,
 .product:hover,
 .product:focus {
 	box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.5);
 }
 
-.banner::after,
 .callout::after {
 	background-color: #ee3496;
 	color: #fff;
@@ -156,7 +159,6 @@ img {
 	content: "Pre-orders open!";
 }
 
-.banner:hover::after,
 .callout:hover::after {
 	opacity: 0;
 }
@@ -209,6 +211,16 @@ img {
 .product[data-genre="nukige"] .product-header::before {
 	background-color: #9e53a0;
 	content: "Nukige";
+}
+
+.product[data-genre="bl"] .product-header::before {
+	background-color: #fecf21;
+	content: "BL";
+}
+
+.product[data-genre="gameplay"] .product-header::before {
+	background-color: #68c07f;
+	content: "Gameplay";
 }
 
 .product[data-genre="none"] .product-header::before {

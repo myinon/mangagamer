@@ -16,8 +16,7 @@
 		margin-bottom: 0;
 		width: calc(75.54% - 0.5rem);
 	}
-	.indiegala,
-	.kiss-petals {
+	.advertisement {
 		margin-left: 1rem;
 		width: calc(24.46% - 0.5rem);
 	}
@@ -71,8 +70,7 @@
 			display: none;
 		}
 		.banner,
-		.indiegala,
-		.kiss-petals {
+		.advertisement {
 			margin-bottom: 0;
 			margin-left: 0;
 			width: auto;
