@@ -1,0 +1,30 @@
+@media (min-width: 543px) {
+	.product-container.-long {
+		width: 100%;
+	}
+}
+
+@media (min-width: 799px) and (max-width: 1054px) {
+	.product-container.-long {
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 1055px) {
+	.product-container.-long {
+		width: calc(50% - 0.5rem);
+	}
+}
+
+@supports (display: grid) {
+	@media (min-width: 543px) and (max-width: 1054px) {
+		.product-container.-long {
+			grid-column: 1 / -1;
+		}
+	}
+	@media (min-width: 1055px) {
+		.product-container.-long {
+			grid-column-end: span 2;
+		}
+	}
+}
