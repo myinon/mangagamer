@@ -679,12 +679,16 @@ hr:nth-of-type(1):nth-last-of-type(1) {
 			transition: opacity 0.2s ease;
 		}
 		.intob .nav-bar.-sticky {
+			background-color: hsla(0, 0%, 100%, 0.98);
+		}
+		.intob .nav-bar.-sticky:hover {
 			background-color: #fff;
 		}
 		.intob .nav-bar.-sticky::after {
 			opacity: 1;
 		}
 		.intob .-sticky .menu {
+			background-color: transparent;
 			border-color: transparent;
 			transition-duration: 0s;
 		}
