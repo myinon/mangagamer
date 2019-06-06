@@ -723,3 +723,41 @@ hr:nth-of-type(1):nth-last-of-type(1) {
 		}
 	}
 }
+
+@supports (grid-template-rows: subgrid) {
+	.grid {
+		grid-template-columns: subgrid;
+		overflow: unset;
+	}
+	.announcement,
+	.announcement-link {
+		grid-row-gap: 0;
+	}
+	.announcement,
+	.announcement:not(.is-linked) {
+		display: grid;
+		grid-row-end: span 4;
+		grid-template-rows: subgrid;
+	}
+	.announcement:not(.announcement:not(.is-linked)) {
+		grid-template-columns: subgrid;
+	}
+	.announcement-link {
+		display: grid;
+		grid-row-end: span 4;
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+	}
+	.card {
+		display: grid;
+		grid-row-end: span 3;
+		grid-template-rows: subgrid;
+	}
+	.card-title {
+		margin-bottom: 0;
+		min-height: unset;
+	}
+	.card > .twitter-spacer {
+		height: 8px;
+	}
+}
