@@ -4,7 +4,7 @@
 		navbar = document.querySelector(".nav-bar"),
 		navlinks = navbar.querySelectorAll("a"),
 		fn_delBtn = function (e) {
-			e.target.parentElement.style.display = "none";
+			e.currentTarget.parentElement.style.display = "none";
 			e.preventDefault();
 		},
 		fn_scrollLink = function (e) {
