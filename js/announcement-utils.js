@@ -34,7 +34,6 @@ function matchHeader() {
 function generateGroups(width, gridItems) {
 	let columns = getColumns(width);
 
-	GROUPS.clear();
 	Array.from(gridItems).forEach(function (el, idx) {
 		let groupIdx = Math.floor(idx / columns),
 			group = GROUPS.get(groupIdx);
@@ -51,6 +50,7 @@ function generateGroups(width, gridItems) {
 export function alignToGrid(width, gridItems) {
 	generateGroups(width, gridItems);
 	matchHeader();
+	GROUPS.clear();
 }
 
 export function ready() {
