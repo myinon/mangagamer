@@ -64,6 +64,7 @@
 
 	top.addEventListener("click", function (e) {
 		window.scroll({ left: 0, top: 0, behavior: "smooth" });
+		Promise.resolve().then((_) => document.activeElement.blur());
 		cancelDefault(e);
 		return false;
 	}, false);
