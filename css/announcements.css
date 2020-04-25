@@ -93,13 +93,17 @@ img {
 	border: 5px solid #000;
 	list-style-type: none;
 	margin: 0 20px;
+	max-height: calc(147px + 2rem + 2em);
 	max-width: 960px;
+	overflow-y: auto;
+	overscroll-behavior-y: contain;
 	padding: 1.5em 0 0.5em;
 	text-align: center;
 	transition: border-color 0.2s ease;
 }
 
 .menu li {
+	height: 49px;
 	margin-bottom: 1rem;
 }
 
@@ -597,9 +601,14 @@ hr:nth-of-type(1):nth-last-of-type(1) {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		max-height: none;
+		overflow-y: initial;
+		overscroll-behavior-y: initial;
+		row-gap: 1rem;
 	}
 	.menu li {
 		flex: 1 1 25%;
+		height: auto;
 		margin-bottom: 0;
 	}
 }
