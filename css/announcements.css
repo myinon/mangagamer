@@ -228,6 +228,7 @@ img {
 .convention-info {
 	border-left: 10px solid transparent;
 	margin-left: -10px;
+	scroll-margin-top: calc(var(--menu-height, 0) + 20px);
 }
 
 .convention-info.is-next {
