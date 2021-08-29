@@ -445,6 +445,7 @@ img {
 
 .card > .twitter-spacer {
 	height: 28px;
+	margin-top: 1em;
 }
 
 .announcement > .twitter-share-button,
@@ -453,7 +454,12 @@ img {
 	display: block;
 	left: 20px;
 	position: absolute !important;
-	
+}
+
+.announcement > a + .twitter-share-button,
+.announcement > a + img[src^="data:image/svg+xml"] {
+	bottom: 25px;
+	left: 25px;
 }
 
 hr {
@@ -779,5 +785,6 @@ hr:nth-of-type(1):nth-last-of-type(1) {
 	}
 	.card > .twitter-spacer {
 		height: 8px;
+		margin-top: 0;
 	}
 }
