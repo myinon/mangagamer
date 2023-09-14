@@ -756,10 +756,6 @@ hr:nth-of-type(1):nth-last-of-type(1) {
 		grid-template-columns: subgrid;
 	}
 	.announcement,
-	.announcement-link {
-		grid-row-gap: 0;
-	}
-	.announcement,
 	.announcement:not(.is-linked) {
 		display: grid;
 		grid-row-end: span 4;
@@ -778,13 +774,13 @@ hr:nth-of-type(1):nth-last-of-type(1) {
 		display: grid;
 		grid-row-end: span 3;
 		grid-template-rows: subgrid;
+		padding-top: 0;
 	}
 	.card-title {
 		margin-bottom: 0;
 		min-height: unset;
 	}
 	.card > .twitter-spacer {
-		height: 8px;
 		margin-top: 0;
 	}
 }
