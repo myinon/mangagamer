@@ -118,11 +118,25 @@ img {
 	padding-block-end: var(--info-padding);
 }
 
+.event-date {
+	display: block flex;
+	flex-basis: 10rem;
+	flex-direction: column;
+}
+
 .message {
 	align-items: safe center;
 	display: block flex;
 	flex-wrap: wrap;
 	gap: 0.75rem;
+
+	&:has(.autograph-info) {
+		align-items: stretch;
+	}
+
+	& .autograph-info {
+		margin-block-start: auto;
+	}
 
 	& .message-body {
 		border: 1px solid #d3d6db;
@@ -136,12 +150,35 @@ img {
 	}
 }
 
+.autographs {
+	max-inline-size: 800px;
+
+	& .close {
+		appearance: none;
+		background: transparent;
+		block-size: 2rem;
+		border: 0 none;
+		cursor: pointer;
+		font-size: 2rem;
+		inline-size: 2rem;
+		inset-block-start: 0.25rem;
+		inset-inline-end: 0.25rem;
+		line-height: 1.5rem;
+		position: absolute;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: var(--theme-color);
+		}
+	}
+}
+
 /* Announcement Styles */
 .announcements-grid {
 	display: block grid;
 	gap: 2rem;
 	grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-	justify-content: safe center;
+	justify-items: safe center;
 	margin-inline: max(1rem, 50% - 625px);
 }
 
@@ -167,18 +204,24 @@ img {
 
 .overlay {
 	--alpha: 0%;
+	aspect-ratio: 5 / 7;
 	background-color: hsl(0 0% 100% / var(--alpha, 85%));
 	box-shadow: 0 1px 4px rgb(0 0 0 / 30%), 0 0 40px rgb(0 0 0 / 10%) inset;
 	display: block grid;
 	grid-column-start: 1;
 	grid-row: 1 / -1;
 	grid-template-rows: subgrid;
+	inline-size: 100%;
+	max-block-size: 100%;
+	overflow: clip;
 	row-gap: 0;
+	scrollbar-width: none;
 	text-shadow: 0 0 2px #fff;
 	transition: background-color 0.4s ease-in-out;
 
 	&:where(:focus-within, :hover) {
 		--alpha: 85%;
+		overflow: auto;
 
 		.card-content {
 			opacity: 1;
@@ -210,7 +253,6 @@ img {
 	grid-template-rows: subgrid;
 	margin-block-end: 1rem;
 	opacity: 0;
-	overflow: auto;
 	padding-block: 1rem;
 	padding-inline: 1rem;
 	row-gap: 1rem;
@@ -245,6 +287,7 @@ img {
 		font-size: 0.85rem;
 		grid-column-start: 1;
 		margin-block: 0;
+		max-block-size: 200px;
 
 		& a {
 			z-index: 2;
