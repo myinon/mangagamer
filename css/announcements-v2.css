@@ -95,6 +95,11 @@ img {
 
 .content {
 	margin-block-end: var(--page-spacing);
+
+	& .copyright {
+		margin-block-start: 1.3334lh;
+		text-align: center;
+	}
 }
 
 .info,
@@ -291,7 +296,7 @@ img {
 	padding: 1rem;
 	text-align: center;
 
-	& a {
+	& a:link {
 		color: inherit;
 		text-decoration: none;
 		transition: filter 0.3s ease;
@@ -304,10 +309,14 @@ img {
 			filter: invert(100%);
 		}
 	}
+
+	& .copyright {
+		font-size: smaller;
+		margin-block: 1rem 0;
+	}
 }
 
 .footer-grid {
-	margin-block: 0 1rem;
 	margin-inline: auto;
 	max-inline-size: 1050px;
 }
@@ -360,9 +369,9 @@ img {
 }
 
 .social {
-	display: flex;
+	display: block flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: safe center;
 	list-style-type: none;
 	margin-block: 0;
 	padding-inline-start: 0;
@@ -377,22 +386,17 @@ img {
 	}
 }
 
-.copyright {
-	font-size: smaller;
-	margin: 0;
-}
-
 #gotop.top {
-	align-items: center;
+	align-items: safe center;
 	background-color: #00a1604d;
 	block-size: 55px;
 	color: #fff;
-	display: flex;
+	display: block flex;
 	font-size: 35px;
 	inline-size: 55px;
 	inset-block-end: 0.4em;
 	inset-inline-end: 0.4em;
-	justify-content: center;
+	justify-content: safe center;
 	opacity: 0;
 	position: fixed;
 	text-align: center;
@@ -416,12 +420,12 @@ img {
 
 @media (min-width: 768px) {
 	.footer-grid {
-		align-items: center;
-		display: flex;
+		align-items: safe center;
+		display: block flex;
 		justify-content: space-between;
 	}
 	.social {
-		justify-content: flex-end;
+		justify-content: flex-start;
 	}
 }
 
