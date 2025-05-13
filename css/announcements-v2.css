@@ -178,7 +178,6 @@ img {
 	display: block grid;
 	gap: 2rem;
 	grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-	justify-items: safe center;
 	margin-inline: max(1rem, 50% - 625px);
 }
 
@@ -186,7 +185,9 @@ img {
 	display: block grid;
 	grid-row-end: span 4;
 	grid-template-rows: subgrid;
+	inline-size: 100%;
 	isolation: isolate;
+	margin-inline: auto;
 	max-block-size: 700px;
 	max-inline-size: 500px;
 	row-gap: 0;
