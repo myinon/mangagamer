@@ -178,6 +178,7 @@ img {
 	display: block grid;
 	gap: 2rem;
 	grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+	grid-template-rows: 1fr auto auto max-content;
 	margin-inline: max(1rem, 50% - 625px);
 }
 
@@ -214,7 +215,7 @@ img {
 	grid-template-rows: subgrid;
 	inline-size: 100%;
 	max-block-size: 100%;
-	overflow: clip;
+	overflow: auto;
 	row-gap: 0;
 	scrollbar-width: none;
 	text-shadow: 0 0 2px #fff;
@@ -222,7 +223,6 @@ img {
 
 	&:where(:focus-within, :hover) {
 		--alpha: 85%;
-		overflow: auto;
 
 		.card-content {
 			opacity: 1;
@@ -293,6 +293,12 @@ img {
 		& a {
 			z-index: 2;
 		}
+	}
+}
+
+@-moz-document url-prefix() {
+	.announcements-grid {
+		grid-template-rows: auto auto auto max-content;
 	}
 }
 
