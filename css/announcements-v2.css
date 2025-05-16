@@ -158,17 +158,26 @@ img {
 		background: transparent;
 		block-size: 2rem;
 		border: 0 none;
+		color: black;
 		cursor: pointer;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		inline-size: 2rem;
 		inset-block-start: 0.25rem;
 		inset-inline-end: 0.25rem;
-		line-height: 1.5rem;
+		line-height: 1rem;
+		outline: 0 none;
+		padding-block: 0;
+		padding-inline: 0;
 		position: absolute;
 		transition: color 0.3s ease;
+		vertical-align: middle;
 
 		&:hover {
 			color: var(--theme-color);
+		}
+
+		&:focus-visible {
+			outline: 1px dashed currentColor;
 		}
 	}
 }
