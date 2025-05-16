@@ -21,9 +21,13 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-a:link {
+a:link,
+button {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent;
+}
+
+a:link {
 	color: inherit;
 	transition: color 0.3s ease;
 
@@ -152,6 +156,10 @@ img {
 
 .autographs {
 	max-inline-size: 800px;
+
+	&::backdrop {
+		background-color: rgb(0 0 0 / 67%);
+	}
 
 	& .close {
 		appearance: none;
